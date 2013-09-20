@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @dicho.nombre %>
+</p>
+
+<p>
+  <b>Dicho:</b>
+  <%= @dicho.dicho %>
+</p>
+
+
+<%= link_to 'Edit', edit_dicho_path(@dicho) %> |
+<%= link_to 'Back', dichos_path %>

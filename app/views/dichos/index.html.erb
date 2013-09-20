@@ -1,0 +1,25 @@
+<h1>Listing dichos</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Dicho</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dichos.each do |dicho| %>
+  <tr>
+    <td><%= dicho.nombre %></td>
+    <td><%= dicho.dicho %></td>
+    <td><%= link_to 'Show', dicho %></td>
+    <td><%= link_to 'Edit', edit_dicho_path(dicho) %></td>
+    <td><%= link_to 'Destroy', dicho, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dicho', new_dicho_path %>
